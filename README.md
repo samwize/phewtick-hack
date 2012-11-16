@@ -3,6 +3,8 @@ Phewtick Hack
 
 This is a python script to automatically call Phewtick RESTful APIs. 
 
+Automatically earns you money!
+
 
 What is Phewtick?
 ------------------
@@ -22,7 +24,9 @@ Why create this hack?
 
 The story goes like this..
 
-My colleagues and I all use Phewtick, and is intrigued with this app 'idea' and 'business model'. We are active users of Phewtick, and the first thing we did as we arrive in office is to 'meetup'. And we meetup almost every hour..
+My colleagues and I all use Phewtick, and is intrigued with this app 'idea' and 'business model'. We are active users of Phewtick, and the first thing we did as we arrive in office is to 'meetup'.
+
+And we meetup almost every hour..
 
 As a [convert hacker](http://linked.in/junda), whose work is in [providing awesome API](http://developer.hoiio.com), I thought I should take a look at Phewtick internals.
 
@@ -48,7 +52,7 @@ Clone the project and rename the `settings-sample.py` to `settings.py`
 	git clone https://github.com/samwize/phewtick-hack.git
 	mv phewtick-hack/settings-sample.py phewtick-hack/settings.py
 
-Open `settings.py` and enter your token, and your friends' tokens. To more the denser your network.
+Open `settings.py` and enter your token, and your friends' tokens. To more tokens, the denser your network.
 
 Read the next section on how you can retrieve your token.
 
@@ -59,6 +63,7 @@ Run the script:
 
 The script will automate refreshing of QR code and scanning it for everyone. Then it will sleep for around 1 hour before repeating again.
 
+Cheers (if you manage to cash out..)
 
 
 Retrieving tokens
