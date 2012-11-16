@@ -6,6 +6,7 @@ import json
 from random import randrange
 from time import sleep
 from settings import *
+from datetime import datetime, timedelta
 
 # Refresh scan
 refresh_url = 'http://v4api.phewtick.com/meets/refresh'
@@ -104,7 +105,7 @@ def updateLocation(token):
 
 # Start the hack engine (:
 while (True):
-    # Loop from 1st till second last token. (remember range is not inclusive of 2nd param)
+    # Loop from 1st till second last token
     for i in range(0, len(tokens)-1):
         # Loop for from next till last
         for j in range(i+1, len(tokens)):
@@ -114,8 +115,12 @@ while (True):
             sleep(randrange(10))
         sleep(randrange(20))
 
-    # For every ~1 hour (random between 1 to 1.30hr)
-    sleep(60*60 + randrange(30*60))
+    # Slepp for ~1 hour (random between 1 to 1.30hr)
+    t = 60*60 + randrange(30*60)
+    next = datetime.now() + timedelta(0,t)
+    print "Sleeping for " + str(t/60) + " minutes.."
+    print "Next meetup at " + next.strftime('%H:%M')
+    sleep(t)
 
     # Update everybody location
     for i in range(0, len(tokens)):
