@@ -115,10 +115,11 @@ while (True):
             sleep(randrange(10))
         sleep(randrange(20))
 
-    # Slepp for ~1 hour (random between 1 to 1.30hr)
-    t = 60*60 + randrange(30*60)
-    next = datetime.now() + timedelta(0,t)
+
+    # Sleep for 1 hour
+    t = 60*60
     print "Sleeping for " + str(t/60) + " minutes.."
+    next = datetime.now() + timedelta(0,t)
     print "Next meetup at " + next.strftime('%H:%M')
     sleep(t)
 
