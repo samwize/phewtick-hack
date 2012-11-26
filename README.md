@@ -83,3 +83,13 @@ What you need here is the `token` (which is purposefully blurred in the screensh
 
 Tip: You could ask all your friends to connect to your proxy and sniff their tokens.
 
+
+
+Deploying to dotcloud
+----------------------
+
+You can also deploy to [dotcloud](http://dotcloud.com) so that the python script is run day and night on a remote server. 
+
+The 2 files added are `dotcloud.yml` and `supervisord.conf`, which you do not need to touch. 
+
+Simply sign up with dotcloud, learn to create a python app, then push to it.

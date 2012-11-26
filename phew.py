@@ -8,6 +8,9 @@ from time import sleep
 from settings import *
 from datetime import datetime, timedelta
 
+# Set to true to print debug logs
+DEBUG = False
+
 # Refresh scan
 refresh_url = 'http://v4api.phewtick.com/meets/refresh'
 
@@ -46,7 +49,8 @@ def refreshToken(token):
     else:
         data = response.read()
     
-    # print data
+    if DEBUG:
+        print data
     qr = json.loads(data)['qr_key']
     # print 'Refresh QR: ' + qr
 
@@ -70,13 +74,17 @@ def scanToken(token, qr_key):
     else:
         data = response.read()
     
-    # print data
+    if DEBUG:
+        print data
     res = json.loads(data)
-    # if (hasattr(res, 'get_point')):
+    
     if 'get_point' in res:
         print '>> Earned ' + str(res['get_point'])
     else:
-        print '.'
+        if 'err_text' in res:
+            print 'Error: ' + str(res['err_text'])
+        else:
+            print '.'
 
 
 def updateLocation(token):
@@ -114,7 +122,6 @@ while (True):
             scanToken(tokens[i], new_qr_key)
             sleep(randrange(10))
         sleep(randrange(20))
-
 
     # Sleep for 1 hour
     t = 60*60
