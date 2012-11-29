@@ -80,16 +80,19 @@ Instead of `python phew.py` as described above, start python interactive shell.
 
 Assuming you want to send from the first token which is in the array `tokens[0]` to a Phewtick id `123456`, type
 
+```python
 	from phew import *
 	message(0, 123456, "Hello!")
+```
 
 You can message to _any_ Phewtick id. Yes, that means you can spam anybody.
 
 To find your friends Phewtick id, you can generate with this 
 
+```python
 	from phew import *
 	generateUsers()
-	
+```	
 
 Retrieving tokens
 -----------------
