@@ -1,7 +1,7 @@
-# Append your friends' token into this array
-tokens = ['',
-    '',
-    '',]
+# Append tokens into this array
+tokens = ['YOUR TOKEN',
+    'FRIEND TOKEN 1',
+    'FRIEND TOKEN 2',]
 
 # Location info
 lat = 1.329576

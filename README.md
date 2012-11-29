@@ -3,7 +3,11 @@ Phewtick Hack
 
 This is a python script to automatically call Phewtick RESTful APIs. 
 
-Automatically earns you money!
+It does 2 things very well:
+
+1. Automatically 'scan QR code' to earn you money!
+
+2. Send message to _any_ Phewtick user!
 
 
 What is Phewtick?
@@ -44,8 +48,8 @@ Just the scanning.
 We are not really cheating. We are indeed meeting up everyday in the office :)
 
 
-Usage
---------
+Usage 1: Auto Scan
+------------------
 
 Clone the project and rename the `settings-sample.py` to `settings.py`
 
@@ -65,6 +69,27 @@ The script will automate refreshing of QR code and scanning it for everyone. The
 
 Cheers (if you manage to cash out..)
 
+
+Usage 2: Messaging
+-------------------
+
+Instead of `python phew.py` as described above, start python interactive shell.
+
+	cd phewtick-hack
+	python
+
+Assuming you want to send from the first token which is in the array `tokens[0]` to a Phewtick id `123456`, type
+
+	from phew import *
+	message(0, 123456, "Hello!")
+
+You can message to _any_ Phewtick id. Yes, that means you can spam anybody.
+
+To find your friends Phewtick id, you can generate with this 
+
+	from phew import *
+	generateUsers()
+	
 
 Retrieving tokens
 -----------------
